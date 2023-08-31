@@ -1,7 +1,1451 @@
-<p>Hello 大家好</p>
-<p>这是我的个人网站。 </p>
-<p>很高兴你来到这里, 你可以在以下的网站找到我</p>
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html style="">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>公安机关互联网站安全管理服务平台</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=9">
+    <link rel="shortcut icon" href="/img/ico.ico" type="image/x-icon"/>
+    <link href="/css/bootstrap.css?v=2018.11.26" rel="stylesheet" media="screen">
+    <link href="/css/bootstrap-responsive.css?v=2018.11.26" rel="stylesheet"
+          media="screen">
+    <link href="/css/css.css?v=2018.11.26" rel="stylesheet" media="screen">
+    <link href="/css/css2.css?v=2018.11.26" rel="stylesheet" media="screen">
+    <link rel="stylesheet" href="/css/custom/milk.css?v=2018.11.26">
+    <link href="/css/loginform.css?v=2018.11.26" rel="stylesheet"/>
+    <link href="/css/nismsp.css?v=2018.11.26" rel="stylesheet"/>
+    <link href="/css/guestbook.css" rel="stylesheet" type="text/css"/>
 
-<ul>
-  <li> <a href="https://www.xyyy.love/">这是我的个人博客</a> </li>
+    <!-- 表单验证 -->
+    <script src="/js/jquery.js"></script>
+    <script type="text/javascript">
+        var taken_for_user = 'fd3548de-60ed-46c7-842a-3df61e91cb13';
+    </script>
+    <script type="text/javascript"
+            src="/js/custom/defaultToken.js?v=2018.11.26"></script>
+    <script src="/js/bootstrap.min.js"></script>
+    <script src="/js/jquery-validation-1.13.1/lib/jquery.mockjax.js?v=2018.11.26"></script>
+    <script src="/js/jquery-validation-1.13.1/dist/jquery.validate.js"></script>
+    <script type="text/javascript" src="/js/custom/login.js?v=2018.11.26"></script>
+    <script type="text/javascript"
+            src="/js/custom/recordquery.js?v=2018.11.26"></script>
+    <script type="text/javascript" src="/js/custom/md5.min.js?v=2018.11.26"></script>
+    <script type="text/javascript" src="/js/custom/lubotu.js?v=2018.11.26"></script>
+
+    <style>
+        .error {
+            position: absolute;
+            top: 5px;
+            left: 278px;
+            width: 300px;
+        }
+
+        .error2 {
+            position: absolute;
+            top: 103px;
+            left: 278px;
+            width: 300px;
+        }
+
+        .error3 {
+            position: absolute;
+            top: 140px;
+            left: 278px;
+            width: 300px;
+        }
+
+        .error4 {
+            position: absolute;
+            top: 105px;
+            left: 278px;
+            width: 300px;
+        }
+
+        .errors {
+            position: absolute;
+            top: 65px;
+            left: 278px;
+            width: 300px;
+        }
+
+        a:hover {
+            text-decoration: none;
+        }
+
+        h5 {
+            color: #666666 !important;
+        }
+    </style>
+</head>
+
+<body>
+<div id="side-bar" class="side-pannel side-bar">
+    <a href="javascript:void(0)" class="text topicon"><s class="g-icon-qq1"></s></a>
+    
+    <a href="javascript:void(0)" class="text" id="qqs"><span>留言问答</span></a>
+</div>
+<!-- 页面头 -->
+
+
+<div class="top-start">
+<div class="top-part">
+<!-- 氛围 -->
+<div class="hj-top-banner"></div>
+<!-- 头部搜索 -->
+<div class="search-bar-area">
+<div class="doodle-wrapper">
+<a class="" href="#"><img src="/img/logo.png" /> </a>
+</div>
+<div class="search-input-wrapper">
+<div class="search-input">
+<i class="hui-icon hui-icon-search"></i>
+<input type="text" placeholder="备案查询" value="" data-empty-link="#" />
+<div class="autocompletion-list-wrapper"></div>
+</div>
+<a class="btn-search" href="javascript:void(0);"
+onclick="window.location.href='/portal/recordQuery?token=fd3548de-60ed-46c7-842a-3df61e91cb13'">查询</a>
+</div>
+</div>
+</div>
+<div class="dsp-banner-area">
+<div class="course-menu-area">
+<ul class="course-menu-list clearfix">
+<li class='active'><a class="menu-name " href="/portal/index"><span>首页</span> </a> </li>
+<li ><a class="menu-name" href="/portal/recordQuery"><span>公共查询</span> </a> </li>
+
+
+<li class='active'><a class="menu-name" href="/portal/recordInfo?query_type=1"><span>政策文件</span> </a> </li>
+
+
+
+<li class='active'><a class="menu-name" href="/portal/recordInfo?query_type=2"><span>通知公告</span> </a> </li>
+
+
+
+<li class='active'><a class="menu-name" href="/portal/recordInfo?query_type=3"><span>备案须知</span> </a> </li>
+
+
+
+<li class='active'><a class="menu-name" href="/portal/recordInfo?query_type=15"><span>政策解读</span> </a> </li>
+
+
+
+
+
+
+
+
+
+
+<li ><a class="menu-name" href="/portal/recordShow" onclick="loading()"><span>备案展厅</span> </a> </li>
 </ul>
+</div>
+</div>
+</div>
+
+</div>
+<div class="wrapper" style="position:relative;">
+
+    <!-- start:登录 -->
+    <div class="z_indexk">
+        <div class="z_adbg" id="cbg">
+            <div class="container container1 J_login" style="position:relative; z-index:1;">
+                <div class="z_adleft">
+                    <div class="xuanch" style="margin-bottom:0px;"><img
+                            src="/img/xcy.png"/></div>
+                    <div class="liucheng" style="margin-top:10px; width:424px; height:247px;">
+                        <img src="/img/liucheng.png"/>
+                        <a href="javascript:;" style="margin-top:-10px;" class="btn_login"
+                           onclick="showLogin(this, 'right')">评估报告登录</a>
+                    </div>
+                </div>
+                <!-- start:登录框 -->
+                <div class="loginbg"
+                     style="position:relative; margin-top:92px; width:424px; height:247px; background:transparent; border:0px;">
+                    <div class="liucheng">
+                        <img style="margin-left:20px;" src="/img/liuchengRight.png"/>
+                        <a href="javascript:void(0)" class="btn_login" id="login">联网备案登录</a>
+                    </div>
+                </div>
+                <!-- end:登录框 -->
+                <!-- start:二维码 -->
+                <div id="ewm" style="display: none;">
+                    <div><img id="u1_img" src="/img/ewm1.jpg"/><img id="u2_img"
+                                                                                                       src="/img/ewm2.jpg"/>
+                    </div>
+                    <div class="sao_sao">使用手机扫一扫对应版本的二维码<br/><br/>
+                        下载<span style="color: #FFCC00;">智慧IDC</span>移动应用软件
+                        <br/><br/><a onclick="djfh();"><span style="color:#ffffff;margin-left:194px;cursor: pointer;">点击返回登录页面<span></a>
+                    </div>
+                </div>
+                <!-- end:二维码 -->
+            </div>
+
+
+            <!-- 第一种登录方式  start -->
+            <div class="container container1 J_loginRight"
+                 style="display:none; position:relative; z-index:2; left:936px;">
+                <div class="z_adleft">
+                    <div class="xuanch" style="margin-bottom:0px;"><img
+                            src="/img/xcy.png"/></div>
+                    <div class="liucheng"><img src="/img/liucheng.png"/></div>
+                </div>
+                <!-- start:登录框 -->
+                <div class="loginbg" style="position:relative;width:330px;" id="dlk">
+                    <!-- start:tab页内容 -->
+                    <div id="myTabContent" class="">
+                        <!-- 普通用户 -->
+                        <div class="tab-pane  active in" id="sec" style="display:block;">
+                            <form id="loginformSEC" autocomplete="off"
+                                  action="/user/loginSEC" method="post">
+                                <input type="hidden" name="token" value="fd3548de-60ed-46c7-842a-3df61e91cb13"/>
+                                <ul class="unstyled controls logink">
+                                    <li class="row-fluid" style="position:relative;">
+                                        <label id="laccount" for="account" class=" text-right z_color">用户名</label>&nbsp;
+                                        <input class="z_input" type="text" name="accountSEC" id="accountSEC"
+                                               maxlength="30" onkeyup="accountCheckSEC()"/>
+                                        <input type="hidden" id="accountFlagSEC"/>
+                                        <span id="accountRequired" class="error" style="display:none;"><img
+                                                src="/img/unchecked.gif"><font
+                                                color="red">请输入账号</font></span>
+                                        <span id="accountNum" class="error" style="display:none;"><img
+                                                src="/img/unchecked.gif"><font
+                                                color="red">账号最少六位</font></span>
+                                        <span id="accountRule" class="error" style="display:none;"><img
+                                                src="/img/unchecked.gif"><font
+                                                color="red">账号为字母、数字、下划线</font></span>
+                                        <span id="accountR" class="error" style="display:none;"><img
+                                                src="/img/checked.gif"></span>
+                                        <span class="status error"></span>
+                                    </li>
+                                    <li class="row-fluid">
+                                        <label id="lpwd" for="pwd" class="text-right z_color">密码</label>&nbsp;
+                                        <input class="z_input" type="password" onpaste="return false" name="pwdSEC"
+                                               id="pwdSEC" maxlength="20" onkeyup="pwdCheckSEC()"/>
+                                        <input type="hidden" id="pwdFlagSEC"/>
+                                        <span id="pwdRequired" class="error2" style="display:none;"><img
+                                                src="/img/unchecked.gif"><font
+                                                color="red">请输入密码</font></span>
+                                        <span id="pwdNum" class="error2" style="display:none;"><img
+                                                src="/img/unchecked.gif"><font
+                                                color="red">密码最少六位</font></span>
+                                        <span id="pwdR" class="error2" style="display:none;"><img
+                                                src="/img/checked.gif"></span>
+                                        <span class="status error2"></span>
+                                    </li>
+                                    <li class="row-fluid">
+                                        <label id="lvalidCodeSEC" class=" text-right z_color">验证码</label>&nbsp;
+                                        <input class="z_input" type="text" name="validCodeSEC" maxlength="4"
+                                               id="validCodeSEC" style="width:70px;" onkeyup="validCodeCheckSEC()"/>
+                                        <span><img alt="点击刷新" id="imgs"
+                                                   src="/common/image.jsp?t=101"
+                                                   style="cursor: pointer;"
+                                                   onclick="this.src='/common/image.jsp?t=101&tim='+new Date().getTime()"></span>
+                                        <input type="hidden" id="validCodeFlagSEC"/>
+                                        <span id="validCodeRequiredSEC" class="error4" style="display:none;"><img
+                                                src="/img/unchecked.gif"><font
+                                                color="red">请输入验证码</font></span>
+                                        <span id="validCodeESEC" class="error4" style="display:none;"><img
+                                                src="/img/unchecked.gif"><font
+                                                color="red">验证码错误</font></span>
+                                        <span id="validCodeRSEC" class="error4" style="display:none;"><img
+                                                src="/img/checked.gif"></span>
+                                        <span class="status error4"></span>
+                                    </li>
+                                    <li class="row-fluid"></li>
+                                    <li class="row-fluid" style="margin-top:10px; height:20px;">
+                                        <label class="" style="line-height:20px; margin-left:30px;width:90px;">
+                                        </label>
+                                        <label class="text-right" style="margin-left:80px;"><a href="../portal/findpwd">忘记密码？</a></label>
+                                    </li>
+                                    <li class="row-fluid" style="margin-top:5px;">
+                                        <input type="hidden" value="" name="zzSEC" id="zzSEC"/>
+                                        <a href="javascript:void(0)" class="btn btn-danger btn-large"
+                                           style="width:230px; margin-left:35px;" id="btn" onclick="loggingSEC()">登录</a>
+                                    </li>
+                                    <li class="row-fluid" style="">
+                                        <label class="text-left z_color " style="width:140px;margin-left:40px;">没有账号？<a
+                                                href="/user/registerurl?userType=ptyh">注册</a></label>
+                                        <a href="javascript:;" class="backLogin"
+                                           onclick="backLogin(this, 'right')">返回</a>
+                                    </li>
+                                </ul>
+                            </form>
+                        </div>
+
+
+                        <!-- end:tab页内容 -->
+                    </div>
+                    <!-- end:登录框 -->
+                    <!-- start:二维码 -->
+
+                    <!-- end:二维码 -->
+                </div>
+                <!-- 第一种登录方式 end -->
+
+            </div>
+            <!-- 第二种登录方式  start -->
+            <div class="container container1 J_loginLeft"
+                 style="display:none; position:relative; z-index:2; left:-930px;">
+                <div class="z_adleft">
+                    <div class="xuanch" style="margin-bottom:0px;"><img
+                            src="/img/xcy.png"/></div>
+                    <div class="liucheng" style="width:424px; height:247px;"><img id="imgliucheng"
+                                                                                  src="/img/liuchengRight.png"/>
+                    </div>
+                </div>
+                <!-- start:登录框 -->
+                <div class="loginbg" style="position:relative;width:330px;" id="dlk">
+                    <!-- start:tab页 -->
+                    <ul class="nav nav-tabs login_tab" id="myTab" style="margin-top:-16px;font-size: 10px;">
+                        <li id="dl1" class="active">
+                            <a href="#ptyh" data-toggle="tab" id="PTUSER" title="网站用户">网站用户</a>
+                        </li>
+                        <li id="dl2">
+                            <a href="#jrs" data-toggle="tab" id="qyLoginA" title="IDC/ISP/CDN">IDC/ISP/CDN</a>
+                        </li>
+                        <li id="dl3">
+                            <a href="#appMarket" data-toggle="tab" id="APPMarket" title="APP商店">APP商店</a>
+                        </li>
+                        <!-- <li id="dl8">
+                            <a href="#xcPanel" data-toggle="tab" id="xc" title="服务商用户">用户</a>
+                        </li> -->
+                    </ul>
+                    <!-- start:tab页 -->
+                    <!-- start:tab页内容 -->
+                    <div id="myTabContent" class="">
+                        <!-- 普通用户 -->
+                        <div class="tab-pane  active in" id="ptyh">
+                            <form id="loginform" autocomplete="off"
+                                  action="/user/login" method="post">
+                                <input type="hidden" name="token" value="fd3548de-60ed-46c7-842a-3df61e91cb13"/>
+                                <ul class="unstyled controls logink">
+                                    <li class="row-fluid" style="position:relative;">
+                                        <label id="laccount" for="account" class=" text-right z_color">用户名</label>&nbsp;
+                                        <input class="z_input" type="text" name="account" id="account" maxlength="30"
+                                               onkeyup="accountCheck()"/>
+                                        <input type="hidden" id="accountFlag"/>
+                                        <span id="accountRequired" class="error" style="display:none;"><img
+                                                src="/img/unchecked.gif"><font
+                                                color="red">请输入账号</font></span>
+                                        <span id="accountNum" class="error" style="display:none;"><img
+                                                src="/img/unchecked.gif"><font
+                                                color="red">账号最少六位</font></span>
+                                        <span id="accountRule" class="error" style="display:none;"><img
+                                                src="/img/unchecked.gif"><font
+                                                color="red">账号为字母、数字、下划线</font></span>
+                                        <span id="accountR" class="error" style="display:none;"><img
+                                                src="/img/checked.gif"></span>
+                                        <span class="status error"></span>
+                                    </li>
+                                    <li class="row-fluid">
+                                        <label id="lpwd" for="pwd" class="text-right z_color">密码</label>&nbsp;
+                                        <input class="z_input" type="password" onpaste="return false" name="pwd"
+                                               id="pwd" maxlength="20" onkeyup="pwdCheck()"/>
+                                        <input type="hidden" id="pwdFlag"/>
+                                        <span id="pwdRequired" class="error2" style="display:none;"><img
+                                                src="/img/unchecked.gif"><font
+                                                color="red">请输入密码</font></span>
+                                        <span id="pwdNum" class="error2" style="display:none;"><img
+                                                src="/img/unchecked.gif"><font
+                                                color="red">密码最少六位</font></span>
+                                        <span id="pwdR" class="error2" style="display:none;"><img
+                                                src="/img/checked.gif"></span>
+                                        <span class="status error2"></span>
+                                    </li>
+                                    <li class="row-fluid">
+                                        <label id="lvalidCode" class=" text-right z_color">验证码</label>&nbsp;
+                                        <input class="z_input" type="text" name="validCode" maxlength="4" id="validCode"
+                                               style="width:70px;" onkeyup="validCodeCheck()"/>
+                                        <span><img alt="点击刷新" id="imgs"
+                                                   src="/common/image.jsp?t=4"
+                                                   style="cursor: pointer;"
+                                                   onclick="this.src='/common/image.jsp?t=4&tim='+new Date().getTime()"></span>
+                                        <input type="hidden" id="validCodeFlag"/>
+                                        <span id="validCodeRequired" class="error3" style="display:none;"><img
+                                                src="/img/unchecked.gif"><font
+                                                color="red">请输入验证码</font></span>
+                                        <span id="validCodeE" class="error3" style="display:none;"><img
+                                                src="/img/unchecked.gif"><font
+                                                color="red">验证码错误</font></span>
+                                        <span id="validCodeR" class="error3" style="display:none;"><img
+                                                src="/img/checked.gif"></span>
+                                        <span class="status error3"></span>
+                                    </li>
+                                    <li class="row-fluid" style="margin-top:10px; height:20px;">
+                                        <label class="" style="line-height:20px; margin-left:30px;width:90px;">
+                                        </label>
+                                        <label class="text-right" style="margin-left:80px;"><a href="../portal/findpwd">忘记密码？</a></label>
+                                    </li>
+                                    <li class="row-fluid" style="margin-top:5px;">
+                                        <input type="hidden" value="" name="zz" id="zz"/>
+                                        <a href="javascript:void(0)" class="btn btn-danger btn-large"
+                                           style="width:230px; margin-left:35px;" id="btn" onclick="logging()">登录</a>
+
+                                    </li>
+                                    <li class="row-fluid" style="">
+                                        <label class="text-left z_color " style="width:230px;margin-left:40px;">没有账号？<a
+                                                href="/user/registerurl?userType=ptyh">注册</a>
+                                            </label>
+                                        <a href="javascript:;" class="backLogin"
+                                           onclick="backLogin(this, 'left')">返回</a>
+
+                                        <label class="text-left z_color " style="margin-top:10px;">
+                                            <a href="/user/redirect/loginbyGjptAccount"
+                                               class="btn btn-primary btn-large" style="width:230px; margin-left:35px;">公安部账号登录</a></label>
+
+                                    </li>
+                                </ul>
+                            </form>
+                        </div>
+                        <!-- 普通用户 -->
+                        <!-- IDC用户 -->
+                        <div class="tab-pane " id="jrs" style="display: none;">
+                            <form id="loginformIDC" autocomplete="off"
+                                  action="/user/loginIdc" method="post">
+                                <input type="hidden" name="token" value="fd3548de-60ed-46c7-842a-3df61e91cb13"/>
+                                <ul class="unstyled controls logink">
+                                    <li class="row-fluid">
+                                        <label id="laccount" for="account" class=" text-right z_color">用户名</label>&nbsp;
+                                        <input class="z_input" type="text" name="accountIDC" id="accountIDC"
+                                               maxlength="30" onkeyup="accountCheckIDC()"/>
+                                        <input type="hidden" id="accountFlagIDC"/>
+                                        <span id="accountRequiredIDC" class=" errors" style="display:none;"><img
+                                                src="/img/unchecked.gif"><font
+                                                color="red">请输入账号</font></span>
+                                        <span id="accountNumIDC" class="error" style="display:none;"><img
+                                                src="/img/unchecked.gif"><font
+                                                color="red">账号最少六位</font></span>
+                                        <span id="accountRuleIDC" class="error" style="display:none;"><img
+                                                src="/img/unchecked.gif"><font
+                                                color="red">账号为字母、数字、下划线</font></span>
+                                        <span id="accountRIDC" class="error" style="display:none;"><img
+                                                src="/img/checked.gif"></span>
+                                        <span class="status error"></span>
+                                    </li>
+                                    <li class="row-fluid">
+                                        <label id="lpwd" for="pwd" class="text-right z_color">密码</label>&nbsp;
+                                        <input class="z_input" type="password" onpaste="return false" name="pwdIDC"
+                                               id="pwdIDC" maxlength="20" onkeyup="pwdCheckIDC()"/>
+                                        <input type="hidden" id="pwdFlagIDC"/>
+                                        <span id="pwdRequiredIDC" class="error2" style="display:none;"><img
+                                                src="/img/unchecked.gif"><font
+                                                color="red">请输入密码</font></span>
+                                        <span id="pwdNumIDC" class="error2" style="display:none;"><img
+                                                src="/img/unchecked.gif"><font
+                                                color="red">密码最少六位</font></span>
+                                        <span id="pwdRIDC" class="error2" style="display:none;"><img
+                                                src="/img/checked.gif"></span>
+                                        <span class="status error2"></span>
+                                    </li>
+                                    <li class="row-fluid">
+                                        <label id="lvalidCode" class=" text-right z_color">验证码</label>&nbsp;
+                                        <input class="z_input" type="text" name="validCodeIDC" maxlength="4"
+                                               id="validCodeIDC" style="width:70px;" onkeyup="validCodeCheckIDC()"/>
+                                        <span><img alt="点击刷新" id="imgs"
+                                                   src="/common/image.jsp?t=7"
+                                                   style="cursor: pointer;"
+                                                   onclick="this.src='/common/image.jsp?t=7&tim='+new Date().getTime()"></span>
+                                        <input type="hidden" id="validCodeFlagIDC"/>
+                                        <span id="validCodeRequiredIDC" class="error3" style="display:none;"><img
+                                                src="/img/unchecked.gif"><font
+                                                color="red">请输入验证码</font></span>
+                                        <span id="validCodeEIDC" class="error3" style="display:none;"><img
+                                                src="/img/unchecked.gif"><font
+                                                color="red">验证码错误</font></span>
+                                        <span id="validCodeRIDC" class="error3" style="display:none;"><img
+                                                src="/img/checked.gif"></span>
+                                        <span class="status error3"></span>
+                                    </li>
+                                    <li class="row-fluid" style="margin-top:10px; height:20px;">
+                                        <label class="" style="line-height:20px; margin-left:30px;width:90px;">
+                                        </label>
+                                        <label class="text-right" style="margin-left:80px;"><a
+                                                href="../portal/idcfindpwd">忘记密码？</a></label>
+                                    </li>
+                                    <li class="row-fluid" style="margin-top:5px;">
+                                        <input type="hidden" value="" name="zz" id="zz"/>
+                                        <a href="javascript:void(0)" class="btn btn-danger btn-large"
+                                           style="width:230px;margin-left:35px;" id="btn" onclick="loggingIDC()">登录</a>
+                                    </li>
+                                    <li class="row-fluid" style="">
+                                        <label class="text-left z_color " style="width:260px;margin-left:13px;">
+                                            <a onclick="idcEwm()">显示二维码</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                            没有账号？<a
+                                                href="/user/registerurl?userType=idc">注册</a>
+                                        </label>
+                                        <a href="javascript:;" class="backLogin"
+                                           onclick="backLogin(this, 'left')">返回</a>
+                                    </li>
+                                </ul>
+                            </form>
+                        </div>
+                        <!-- IDC用户 -->
+                        <!-- app市场 -->
+                        <div class="tab-pane " id="appMarket" style="display: none;">
+                            <form id="loginformApp" autocomplete="off"
+                                  action="/user/loginAPP" method="post">
+                                <input type="hidden" name="token" value="fd3548de-60ed-46c7-842a-3df61e91cb13"/>
+                                <ul class="unstyled controls logink">
+                                    <li class="row-fluid" style="position:relative;">
+                                        <label id="laccount" for="account" class=" text-right z_color">用户名</label>&nbsp;
+                                        <input class="z_input" type="text" name="accountApp" id="accountApp"
+                                               maxlength="30" onkeyup="accountCheckApp()"/>
+                                        <input type="hidden" id="accountFlagApp"/>
+                                        <span id="accountRequiredApp" class="error" style="display:none;"><img
+                                                src="/img/unchecked.gif"><font
+                                                color="red">请输入账号</font></span>
+                                        <span id="accountNumApp" class="error" style="display:none;"><img
+                                                src="/img/unchecked.gif"><font
+                                                color="red">账号最少六位</font></span>
+                                        <span id="accountRuleApp" class="error" style="display:none;"><img
+                                                src="/img/unchecked.gif"><font
+                                                color="red">账号为字母、数字、下划线</font></span>
+                                        <span id="accountRApp" class="error" style="display:none;"><img
+                                                src="/img/checked.gif"></span>
+                                        <span class="status error"></span>
+                                    </li>
+                                    <li class="row-fluid">
+                                        <label id="lpwd" for="pwd" class="text-right z_color">密码</label>&nbsp;
+                                        <input class="z_input" type="password" onpaste="return false" name="pwdApp"
+                                               id="pwdApp" maxlength="20" onkeyup="pwdCheckApp()"/>
+                                        <input type="hidden" id="pwdFlagApp"/>
+                                        <span id="pwdRequiredApp" class="error2" style="display:none;"><img
+                                                src="/img/unchecked.gif"><font
+                                                color="red">请输入密码</font></span>
+                                        <span id="pwdNumApp" class="error2" style="display:none;"><img
+                                                src="/img/unchecked.gif"><font
+                                                color="red">密码最少六位</font></span>
+                                        <span id="pwdRApp" class="error2" style="display:none;"><img
+                                                src="/img/checked.gif"></span>
+                                        <span class="status error2"></span>
+                                    </li>
+                                    <li class="row-fluid">
+                                        <label id="lvalidCode" class=" text-right z_color">验证码</label>&nbsp;
+                                        <input class="z_input" type="text" name="validCodeApp" maxlength="4"
+                                               id="validCodeApp" style="width:70px;" onkeyup="validCodeCheckApp()"/>
+                                        <span><img alt="点击刷新" id="imgs"
+                                                   src="/common/image.jsp?t=100"
+                                                   style="cursor: pointer;"
+                                                   onclick="this.src='/common/image.jsp?t=100&tim='+new Date().getTime()"></span>
+                                        <input type="hidden" id="validCodeFlagApp"/>
+                                        <span id="validCodeRequiredApp" class="error3" style="display:none;"><img
+                                                src="/img/unchecked.gif"><font
+                                                color="red">请输入验证码</font></span>
+                                        <span id="validCodeEApp" class="error3" style="display:none;"><img
+                                                src="/img/unchecked.gif"><font
+                                                color="red">验证码错误</font></span>
+                                        <span id="validCodeRApp" class="error3" style="display:none;"><img
+                                                src="/img/checked.gif"></span>
+                                        <span class="status error3"></span>
+                                    </li>
+                                    <li class="row-fluid" style="margin-top:10px; height:20px;">
+                                        <label class="" style="line-height:20px; margin-left:30px;width:90px;">
+                                        </label>
+                                        <label class="text-right" style="margin-left:80px;"><a
+                                                href="../portal/appfindpwd">忘记密码？</a></label>
+                                    </li>
+                                    <li class="row-fluid" style="margin-top:5px;">
+                                        <input type="hidden" value="" name="zz" id="zz"/>
+                                        <a href="javascript:void(0)" class="btn btn-danger btn-large"
+                                           style="width:230px; margin-left:35px;" id="btn" onclick="loggingApp()">登录</a>
+                                    </li>
+                                    <li class="row-fluid" style="">
+                                        <label class="text-left z_color " style="width:140px;margin-left:40px;">没有账号？<a
+                                                href="/user/registerurl?userType=app">注册</a></label>
+                                        <a href="javascript:;" class="backLogin"
+                                           onclick="backLogin(this, 'left')">返回</a>
+                                    </li>
+                                </ul>
+                            </form>
+                        </div>
+                    </div>
+                    <div id="huangYing" class="loginbg_xia"
+                         style="position:absolute;right:0px;bottom:-32px;width:330px;">
+                        欢迎IDC用户下载<a onclick="djxs();"><span style="color: #FFCC00;">智慧IDC</span></a>移动应用软件
+                    </div>
+                    <!-- end:tab页内容 -->
+                </div>
+                <!-- end:登录框 -->
+                <!-- start:二维码 -->
+                <div id="ewm" style="display: none;">
+                    <div><img id="u1_img" src="/img/ewm1.jpg"/><img id="u2_img"
+                                                                                                       src="/img/ewm2.jpg"/>
+                    </div>
+                    <div class="sao_sao">使用手机扫一扫对应版本的二维码<br/><br/>
+                        下载<span style="color: #FFCC00;">智慧IDC</span>移动应用软件
+                        <br/><br/><a onclick="djfh();"><span style="color:#ffffff;margin-left:194px;cursor: pointer;">点击返回登录页面<span></a>
+                    </div>
+                </div>
+                <!-- end:二维码 -->
+            </div>
+            <!-- 第二种登录方式 end -->
+
+
+        </div>
+        <!-- end:登录 -->
+        <div id="over" class="over"></div>
+        <div id="layout" class="layout"><img src="/img/loading2.gif"/></div>
+            
+        
+
+        <div class="top-fixed-floor-banner-area">
+        <div class="top-fixed-floor-banner-inner">
+        <div class="service-block-list">
+        <div class="inner-wrapper" style="margin-top: 12px;">
+        <div class="serviceleft">
+        <div class="service-area-title">
+        <span class="topinfotitle">信息公开</span>
+        </div>
+        </div>
+        <div class="serviceright">
+        <div class="service-area-title">
+        <span class="topservicetitle">办事服务</span>
+        </div>
+        </div>
+        <div class="col-grid-def5 service-block-item">
+        <div class="service-block-inner box-shadow-block">
+        <a class="service-icon" href="/portal/gaikuangxinxi">
+        <img src="/img/new/icon_1.png" />
+        </a>
+        <div class="service-block-inner-content">
+        <div class="service-item-title">
+        <a href="/portal/gaikuangxinxi">概况信息</a>
+        </div>
+        </div>
+        <!-- .service-block-inner-content -->
+        </div>
+        <!-- .service-block-inner -->
+        </div>
+        <!-- .service-block-item -->
+        <div class="col-grid-def5 service-block-item">
+        <div class="service-block-inner box-shadow-block">
+        <a class="service-icon" href="/portal/jigouzhineng"><img
+        src="/img/new/icon_2.png" /></a>
+        <div class="service-block-inner-content">
+        <div class="service-item-title">
+        <a href="/portal/jigouzhineng">机构职能</a>
+        </div>
+        </div>
+        <!-- .service-block-inner-content -->
+        </div>
+        <!-- .service-block-inner -->
+        </div>
+        <!-- .service-block-item -->
+        <div class="col-grid-def5 service-block-item">
+        <div class="service-block-inner box-shadow-block">
+        <a class="service-icon" href="/portal/recordInfo?query_type=2"><img
+        src="/img/new/icon_3.png" /></a>
+        <div class="service-block-inner-content">
+        <div class="service-item-title">
+        <a href="/portal/recordInfo?query_type=2">通知公告</a>
+        </div>
+        </div>
+        <!-- .service-block-inner-content -->
+        </div>
+        <!-- .service-block-inner -->
+        </div>
+        <!-- .service-block-item -->
+        <div class="col-grid-def5 service-block-item">
+        <div class="service-block-inner box-shadow-block">
+        <a class="service-icon" href="/portal/downloadGuide"><img
+        src="/img/new/icon_4.png" /></a>
+        <div class="service-block-inner-content">
+        <div class="service-item-title">
+        <a href="/portal/downloadGuide">办事指南</a>
+        </div>
+        </div>
+        <!-- .service-block-inner-content -->
+        </div>
+        <!-- .service-block-inner -->
+        </div>
+        <!-- .service-block-item -->
+        <div class="col-grid-def5 service-block-item">
+        <div class="service-block-inner box-shadow-block">
+        <a class="service-icon" href="/lymessage/gkly"><img src="/img/new/icon_5.png" /></a>
+        <div class="service-block-inner-content">
+        <div class="service-item-title">
+        <a href="/portal/downloadNotice">留言公开</a>
+        </div>
+        </div>
+        <!-- .service-block-inner-content -->
+        </div>
+        <!-- .service-block-inner -->
+        </div>
+        <!-- .service-block-item -->
+        </div>
+        <!-- .inner-wrapper -->
+        </div>
+        <!-- .service-block-list -->
+        </div>
+        </div>
+
+        <div class="floor-area nopadding" style="margin-top:18px;">
+        <div class="solve-wrap-left">
+        <div class="solve-body-card">
+        <div class="defcard">
+        <div class="cardhead">
+        <div class="cardheadwrapper">
+        <div class="cardheadtitle">
+		通知公告
+        </div>
+        <div class="ant-card-extra">
+        <a href="../portal/recordInfo?query_type=2">更多&gt;&gt;</a>
+        </div>
+        </div>
+        </div>
+        <div class="ant-card-body">
+        <ul class="genalinfolist">
+	
+		
+            <li class="y-clear">
+            <a title="携手打造和平发展的大格局——记习近平主席出席金砖国家领导人第十五次会晤系列活动" href="/portal/topicDetail?id=1670"  >携手打造和平发展的大格局——记习近平主席出席金砖国家领导人第十五次会晤系列活动</a>
+            <span class="y-right">2023-08-29</span>
+            </li>
+		
+            <li class="y-clear">
+            <a title="大道之行 天下为公——记习近平主席南非之行的几个历史性场景" href="/portal/topicDetail?id=1669"  >大道之行 天下为公——记习近平主席南非之行的几个历史性场景</a>
+            <span class="y-right">2023-08-29</span>
+            </li>
+		
+            <li class="y-clear">
+            <a title="习近平在听取新疆维吾尔自治区党委和政府、新疆生产建设兵团工作汇报时强调：牢牢把握新疆在国家全局中的战略定位 在中国式现代化进程中更好建设美丽新疆" href="/portal/topicDetail?id=1668"  >习近平在听取新疆维吾尔自治区党委和政府、新疆生产建设兵团工作汇报时强调：牢牢把握新疆在国家全局中的战略定位 在中国式现代化进程中更好建设美丽新疆</a>
+            <span class="y-right">2023-08-29</span>
+            </li>
+		
+            <li class="y-clear">
+            <a title="李强主持召开国务院常务会议 审议通过《医药工业高质量发展行动计划（2023－2025年）》等" href="/portal/topicDetail?id=1667"  >李强主持召开国务院常务会议 审议通过《医药工业高质量发展行动计划（2023－2025年）》等</a>
+            <span class="y-right">2023-08-29</span>
+            </li>
+		
+            <li class="y-clear">
+            <a title="李强在广东调研时强调：坚持改革开放锐意创新 塑造高质量发展新优势" href="/portal/topicDetail?id=1666"  >李强在广东调研时强调：坚持改革开放锐意创新 塑造高质量发展新优势</a>
+            <span class="y-right">2023-08-29</span>
+            </li>
+		
+            <li class="y-clear">
+            <a title="陈文清在甘肃调研时强调 奋力开创甘肃政法工作新局面 为服务保障中国式现代化作出新贡献" href="/portal/topicDetail?id=1665"  >陈文清在甘肃调研时强调 奋力开创甘肃政法工作新局面 为服务保障中国式现代化作出新贡献</a>
+            <span class="y-right">2023-08-29</span>
+            </li>
+		
+            <li class="y-clear">
+            <a title="重拳打击跨国电信网络诈骗犯罪 11名电信网络诈骗犯罪嫌疑人被押解回国" href="/portal/topicDetail?id=1664"  >重拳打击跨国电信网络诈骗犯罪 11名电信网络诈骗犯罪嫌疑人被押解回国</a>
+            <span class="y-right">2023-08-29</span>
+            </li>
+		
+            <li class="y-clear">
+            <a title="人民日报：让平安在群众身边可见可感可触" href="/portal/topicDetail?id=1663"  >人民日报：让平安在群众身边可见可感可触</a>
+            <span class="y-right">2023-08-29</span>
+            </li>
+		
+            <li class="y-clear">
+            <a title="中泰缅老四国警方启动合作打击赌诈集团专项联合行动" href="/portal/topicDetail?id=1662"  >中泰缅老四国警方启动合作打击赌诈集团专项联合行动</a>
+            <span class="y-right">2023-08-29</span>
+            </li>
+		
+            <li class="y-clear">
+            <a title="公安部第二次部署推进夏季治安打击整治行动" href="/portal/topicDetail?id=1661"  >公安部第二次部署推进夏季治安打击整治行动</a>
+            <span class="y-right">2023-08-29</span>
+            </li>
+		
+        </ul>
+        </div>
+        </div>
+        </div>
+        <div class="solve-body-card">
+        <div class="defcard">
+        <div class="cardhead">
+        <div class="cardheadwrapper">
+        <div class="cardheadtitle">
+        下载中心
+        </div>
+        <div class="ant-card-extra">
+        <a href="../portal/downloadcenter">更多&gt;&gt;</a>
+        </div>
+        </div>
+        </div>
+        <div class="ant-card-body">
+        <ul class="genalinfolist">
+		
+			
+				<li class="y-clear">
+				<a href="/portal/downloadFile?token=fd3548de-60ed-46c7-842a-3df61e91cb13&id=94">全国互联网安全管理服务平台2022年工作年度报表</a>
+				<span class="y-right">2023-01-17</span>
+				</li>
+			
+		
+			
+				<li class="y-clear">
+				<a href="/portal/downloadFile?token=fd3548de-60ed-46c7-842a-3df61e91cb13&id=87">全国互联网安全管理服务平台2021年工作年度报表</a>
+				<span class="y-right">2022-01-19</span>
+				</li>
+			
+		
+			
+				<li class="y-clear">
+				<a href="/portal/downloadFile?token=fd3548de-60ed-46c7-842a-3df61e91cb13&id=81">互联网交互式服务安全管理要求  第2部分 微博客服务</a>
+				<span class="y-right">2021-05-29</span>
+				</li>
+			
+		
+			
+				<li class="y-clear">
+				<a href="/portal/downloadFile?token=fd3548de-60ed-46c7-842a-3df61e91cb13&id=82">互联网交互式服务安全管理要求 第1部分 基本要求</a>
+				<span class="y-right">2021-05-29</span>
+				</li>
+			
+		
+			
+				<li class="y-clear">
+				<a href="/portal/downloadFile?token=fd3548de-60ed-46c7-842a-3df61e91cb13&id=78">互联网交互式服务安全管理要求  第5部分 论坛服务</a>
+				<span class="y-right">2021-05-28</span>
+				</li>
+			
+		
+			
+				<li class="y-clear">
+				<a href="/portal/downloadFile?token=fd3548de-60ed-46c7-842a-3df61e91cb13&id=80">互联网交互式服务安全管理要求  第3部分 音视频聊天室服务</a>
+				<span class="y-right">2021-05-28</span>
+				</li>
+			
+		
+			
+				<li class="y-clear">
+				<a href="/portal/downloadFile?token=fd3548de-60ed-46c7-842a-3df61e91cb13&id=79">互联网交互式服务安全管理要求  第4部分 即时通信服务</a>
+				<span class="y-right">2021-05-28</span>
+				</li>
+			
+		
+			
+				<li class="y-clear">
+				<a href="/portal/downloadFile?token=fd3548de-60ed-46c7-842a-3df61e91cb13&id=77">全国互联网安全管理服务平台2020年工作年度报表</a>
+				<span class="y-right">2021-01-29</span>
+				</li>
+			
+		
+			
+				<li class="y-clear">
+				<a href="/portal/downloadFile?token=fd3548de-60ed-46c7-842a-3df61e91cb13&id=76">全国互联网安全管理服务平台2019年工作年度报表</a>
+				<span class="y-right">2020-03-21</span>
+				</li>
+			
+		
+			
+				<li class="y-clear">
+				<a href="/portal/downloadFile?token=fd3548de-60ed-46c7-842a-3df61e91cb13&id=75">关于举办2019年中国技能大赛全国信息安全管理职业技能竞赛的通知</a>
+				<span class="y-right">2019-07-09</span>
+				</li>
+			
+		
+			
+		
+			
+		
+			
+		
+			
+		
+			
+		
+			
+		
+			
+		
+			
+		
+			
+		
+			
+		
+			
+		
+			
+		
+			
+		
+			
+		
+			
+		
+			
+		
+			
+		
+			
+		
+			
+		
+			
+		
+			
+		
+			
+		
+			
+		
+			
+		
+			
+		
+			
+		
+			
+		
+        </ul>
+        </div>
+        </div>
+        </div>
+        </div>
+        <div class="solve-wrap-right">
+       
+        <div class="rightbluetitle">
+        联网备案公示
+        </div>
+
+		<marquee behavior="scroll" direction="down" loop="-1" scrollamount="2" onMouseOut="this.start()"
+		onMouseOver="this.stop()" vspace="10" height="450">
+		<ul class="rightbluelist">
+
+		
+			<li class="y-clear">
+			<a href="/apply/queryPublicity?key=f5a2b4b51058f5b712a412641c967ba1">hongcaitiyu.com</a>
+			<span class="y-right">2023-08-31</span>
+			</li>
+		
+			<li class="y-clear">
+			<a href="/apply/queryPublicity?key=d4a050adb4caee8cba7bebe87438fb8b">jxhuzhong.com</a>
+			<span class="y-right">2023-08-31</span>
+			</li>
+		
+			<li class="y-clear">
+			<a href="/apply/queryPublicity?key=e8da819396262ee57043a7f52cda9aba">https://www.kaijunkeji.com</a>
+			<span class="y-right">2023-08-31</span>
+			</li>
+		
+			<li class="y-clear">
+			<a href="/apply/queryPublicity?key=e75d32ce304efe37dea6f96e7941f385">acct.plus</a>
+			<span class="y-right">2023-08-31</span>
+			</li>
+		
+			<li class="y-clear">
+			<a href="/apply/queryPublicity?key=1a8724e624dfc312a88b740582e301e4">damjfloor.com</a>
+			<span class="y-right">2023-08-31</span>
+			</li>
+		
+			<li class="y-clear">
+			<a href="/apply/queryPublicity?key=2b8313589aeca3d8785e15689ab9c1f0">dcgdxww.com</a>
+			<span class="y-right">2023-08-31</span>
+			</li>
+		
+			<li class="y-clear">
+			<a href="/apply/queryPublicity?key=63e09e469596f9537bdf6bbe66574675">xjycdb.cn</a>
+			<span class="y-right">2023-08-31</span>
+			</li>
+		
+			<li class="y-clear">
+			<a href="/apply/queryPublicity?key=927331e042f0918146218bcb0a42000f">xw-edu.com</a>
+			<span class="y-right">2023-08-31</span>
+			</li>
+		
+			<li class="y-clear">
+			<a href="/apply/queryPublicity?key=d23434adf0bcc8e8f7ea792f458e6dbc">cohsc.org</a>
+			<span class="y-right">2023-08-31</span>
+			</li>
+		
+			<li class="y-clear">
+			<a href="/apply/queryPublicity?key=5ecbe33653da0bee3af467ea57dca1f7">tusenwork.cn</a>
+			<span class="y-right">2023-08-31</span>
+			</li>
+		
+			<li class="y-clear">
+			<a href="/apply/queryPublicity?key=a78541ea3f2b1d63850e870dff9c8f46">lhcca.cn</a>
+			<span class="y-right">2023-08-31</span>
+			</li>
+		
+			<li class="y-clear">
+			<a href="/apply/queryPublicity?key=dd660d03531a591b9ac89773cee3d2e8">mievic.com</a>
+			<span class="y-right">2023-08-31</span>
+			</li>
+		
+			<li class="y-clear">
+			<a href="/apply/queryPublicity?key=7ff8740e1a116e11423ccf3eb6cc8373">mievic.cn</a>
+			<span class="y-right">2023-08-31</span>
+			</li>
+		
+			<li class="y-clear">
+			<a href="/apply/queryPublicity?key=ec071b5e8f0247e356c723535d6ddde5">aycm.cn</a>
+			<span class="y-right">2023-08-31</span>
+			</li>
+		
+			<li class="y-clear">
+			<a href="/apply/queryPublicity?key=88c673d8566774972201d6afda5c2d7a">jlumc.com</a>
+			<span class="y-right">2023-08-31</span>
+			</li>
+		
+			<li class="y-clear">
+			<a href="/apply/queryPublicity?key=89b9b7e3595d908d538ad843ab34d961">jlumc.cn</a>
+			<span class="y-right">2023-08-31</span>
+			</li>
+		
+			<li class="y-clear">
+			<a href="/apply/queryPublicity?key=43aa0fce7332837a2aa4da7c0ccb10e4">jlumc.net</a>
+			<span class="y-right">2023-08-31</span>
+			</li>
+		
+			<li class="y-clear">
+			<a href="/apply/queryPublicity?key=5fc8c8f4f8d75871840860d3118e0820">lyxgrd.gov.cn</a>
+			<span class="y-right">2023-08-31</span>
+			</li>
+		
+			<li class="y-clear">
+			<a href="/apply/queryPublicity?key=c361a2ee44a9f3490a133b0ef1a5fbc9">djlszt.com</a>
+			<span class="y-right">2023-08-31</span>
+			</li>
+		
+			<li class="y-clear">
+			<a href="/apply/queryPublicity?key=d7eeadd0ae6cab35195730a17cb496dd">jiangxisls.cn</a>
+			<span class="y-right">2023-08-31</span>
+			</li>
+		
+		</ul>
+		</marquee>
+        </div>
+        </div>
+
+        <div class="floor-area nopadding noborder" style="margin-top: 30px;">
+        <div class="rule-wrap-left">
+        <div class="line_03">
+        <span class="leftline"></span>
+        <span>政策文件</span>
+        <span class="rightline"></span>
+        </div>
+        <div class="rule-body-card">
+        <div class="defcard">
+        <div class="ant-card-body">
+        <ul class="genalinfolistbot">
+		
+            <li class="y-clear">
+            <a title="关于依法收缴非法枪爆等物品严厉打击涉枪涉爆等违法犯罪的通告" href="/portal/topicDetail?id=1659">关于依法收缴非法枪爆等物品严厉打击涉枪涉爆等违法犯罪的通告</a>
+            <span class="y-right">2023-08-29</span>
+            </li>
+		
+            <li class="y-clear">
+            <a title="关于公开征集公共安全行业专业标准化技术委员会委员的通知" href="/portal/topicDetail?id=1658">关于公开征集公共安全行业专业标准化技术委员会委员的通知</a>
+            <span class="y-right">2023-08-29</span>
+            </li>
+		
+            <li class="y-clear">
+            <a title="生成式人工智能服务管理暂行办法" href="/portal/topicDetail?id=1613">生成式人工智能服务管理暂行办法</a>
+            <span class="y-right">2023-07-24</span>
+            </li>
+		
+            <li class="y-clear">
+            <a title="2022年中国毒情形势报告" href="/portal/topicDetail?id=1586">2022年中国毒情形势报告</a>
+            <span class="y-right">2023-07-18</span>
+            </li>
+		
+            <li class="y-clear">
+            <a title="关于调整《网络关键设备和网络安全专用产品目录》的公告" href="/portal/topicDetail?id=1601">关于调整《网络关键设备和网络安全专用产品目录》的公告</a>
+            <span class="y-right">2023-07-13</span>
+            </li>
+		
+        </ul>
+        </div>
+        </div>
+        </div>
+        <div class="cardfooter">
+        <div class="cardfootwrapper">
+        <a href="../portal/recordInfo?query_type=1">更多&gt;&gt;</a>
+        </div>
+        </div>
+        </div>
+        <div class="rule-wrap-right">
+        <div class="line_03">
+        <span class="leftline"></span>
+        <span>政策解读</span>
+        <span class="rightline"></span>
+        </div>
+        <div class="rule-body-card">
+        <div class="defcard">
+        <div class="ant-card-body">
+        <ul class="genalinfolistbot">
+         <li class="y-clear">
+            <a style="font-weight:bold;color:red;" title="【专题】重要政策举措及实施效果" href="https://www.gov.cn/zhengce/zczhjd/">【专题】重要政策举措及实施效果</a>
+            </li>	
+	
+            <li class="y-clear">
+            <a title="《文化和旅游部 公安部关于加强电竞酒店管理中未成年人保护工作的通知》政策解读" href="/portal/topicDetail?id=1639">《文化和旅游部 公安部关于加强电竞酒店管理中未成年人保护工作的通知》政策解读</a>
+            <span class="y-right">2023-08-11</span>
+            </li>
+		
+            <li class="y-clear">
+            <a title="构建规范有序的网络环境" href="/portal/topicDetail?id=1626">构建规范有序的网络环境</a>
+            <span class="y-right">2023-08-01</span>
+            </li>
+		
+            <li class="y-clear">
+            <a title="《生成式人工智能服务管理暂行办法》答记者问" href="/portal/topicDetail?id=1614">《生成式人工智能服务管理暂行办法》答记者问</a>
+            <span class="y-right">2023-07-24</span>
+            </li>
+		
+            <li class="y-clear">
+            <a title="以重拳之力雷霆之势斩断伸向未成年人的“黑手” “两高两部”有关部门负责人就两个司法文件答记者问" href="/portal/topicDetail?id=1538">以重拳之力雷霆之势斩断伸向未成年人的“黑手” “两高两部”有关部门负责人就两个司法文件答记者问</a>
+            <span class="y-right">2023-05-26</span>
+            </li>
+		
+        </ul>
+        </div>
+        </div>
+        </div>
+        <div class="cardfooter">
+        <div class="cardfootwrapper">
+        <a href="../portal/recordInfo?query_type=1">更多&gt;&gt;</a>
+        </div>
+        </div>
+        </div>
+        </div>
+
+
+<div class="band-intro-area">
+	<ul style="" class="clearfix">
+		<li>
+			<div class="table" style="border:2px solid #fff;text-align:center;">
+				<a href="http://www.cac.gov.cn" style="text-decoration: none;font-size: 14px;height:70px;line-height:70px;color:blue;" title="中华人民共和国国家互联网信息办公室">国家互联网信息办公室</a>
+			</div>
+		</li>
+		<li>
+			<div class="table" style="border:2px solid #fff;text-align:center;">
+				<a href="http://www.mps.gov.cn" title="中华人民共和国公安部"
+					style="text-decoration: none;text-decoration: none;font-size: 14px;height:70px;line-height:70px;color:blue;">公安部</a>
+			</div>
+		</li>
+
+		<li>
+			<div class="table" style="border:2px solid #fff;text-align:center;">
+				<a href="http://www.12377.cn" title="违法和不良信息举报中心"
+					style="text-decoration: none;font-size: 14px;height:70px;line-height:70px;color:blue;">违法和不良信息举报中心</a>
+			</div>
+		</li>
+		<li>
+			<div class="table" style="border:2px solid #fff;text-align:center;">
+				<a href="http://cyberpolice.mps.gov.cn/wfjb" title="网络违法犯罪举报网站"
+					style="text-decoration: none;font-size: 14px;height:70px;line-height:70px;color:blue;">网络违法犯罪举报网站</a>
+			</div>
+		</li>
+		<li>
+			<div class="table" style="border:2px solid #fff;text-align:center;">
+				<a href="https://waf.islab.cn" title="中小网站安全防护"
+					style="text-decoration: none;font-size: 14px;height:70px;line-height:70px;color:blue;">中小网站安全防护</a>
+			</div>
+		</li>
+		<li>
+			<div class="table" style="border:2px solid #fff;text-align:center;">
+				<a href="http://www.weishi110.cn" title="网防G01"
+					style="font-size: 14px;height:70px;line-height:70px;color:blue;">网防G01</a>
+			</div>
+		</li>
+	</ul>
+</div>
+
+
+    </div>
+</div>
+<input type="hidden" id="dengLuType" value="">
+
+<link href="/css/nismsp2.css?v=2018.11.26" rel="stylesheet" />
+	<div id="footer-ft" class=" hui-footer">
+	<div class="hui-footer-ft">
+	<div class="hui-footer-ft-row">
+	<p> 邮箱：support@beian.gov.cn&nbsp;&nbsp;&nbsp;&nbsp;邮编：100741&nbsp;&nbsp;&nbsp;&nbsp;地址：北京市东长安街14号&nbsp;&nbsp;&nbsp;&nbsp;网站标识码：bm09000026 </p>
+	</div>
+	<div class="hui-footer-ft-row-icon">
+	<div class="hui-footer-ft-icon">
+	<div class="hui-footer-ft-icon-0">
+	<script id="_jiucuo_" sitecode="bm09000026" src="https://pucha.kaipuyun.cn/exposure/jiucuo.js"></script>
+	</div>
+        <div class="hui-footer-ft-icon-1">
+	<img src="/img/new/garment.png" />
+	</div>
+	<div class="hui-footer-ft-icon-2">
+	<div class="hui-footer-ft-row">
+	<p class="hui-footer-ft-oncall"> <span>Copyright 公安部网络安全保卫局 All Rights Reserved</span> </p>
+	</div>
+	<div class="hui-footer-ft-row">
+	<p class="hui-footer-ft-contact"> <span><img src="/img/new/gongan.png" /><a href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=11010102002019" style="display:inline-block;text-decoration:none;height:20px;line-height:20px;" target="_blank">京公网安备 11010102002019号</a> &nbsp;&nbsp;&nbsp;&nbsp;</span><a href="http://beian.miit.gov.cn/" target="_blank">京ICP备05070602号</a> </p>
+	</div>
+	</div>
+	<div class="hui-footer-ft-icon-1">
+	<img src="/img/new/erweima.png" />
+	</div>
+	</div>
+	</div>
+	</div>
+	</div>
+<script type="text/javascript">
+	$("a").each(function(index,obj){
+		if($(obj).attr("href") != undefined){
+			if(($(obj).attr("href")).indexOf('/')>=0){
+			    if($(obj).attr("href").indexOf("?")>=0){
+					 $(obj).attr("href",$(obj).attr("href")+"&token="+taken_for_user);
+		 	    }else{
+		 	    	$(obj).attr("href",$(obj).attr("href")+"?token="+taken_for_user);
+		 	    }
+			}
+		}
+	});
+
+	$("a").on("click",function(event){
+	//	    event.preventDefault();//使a自带的方法失效，即无法调整到href中的URL(http://www.baidu.com)
+	//	    $.ajax({
+	//	           type: "POST",
+	//	           url: "url地址",
+	//	           contentType:"application/json",
+	//	           data: JSON.stringify({param1:param1,param2:param2}),//参数列表
+	//	           dataType:"json",
+	//	           success: function(result){
+	//	              //请求正确之后的操作
+	//	           },
+	//	           error: function(result){
+	//	              //请求失败之后的操作
+	//	           }
+	//	    });
+	});
+</script>
+
+</body>
+<script type="text/javascript">
+
+    function getParam(name) {
+        var url = location.href;
+        var hasekey = url.indexOf(name);
+        if (hasekey > 0) {
+            var index = url.indexOf("?");
+            var paramstr = "";
+            if (index > 0 && url.length > index) {
+                paramstr = url.substring(index + 1);
+            }
+            var hasekeyP = paramstr.indexOf(name);
+            if (hasekeyP >= 0) {
+                var params = paramstr.split("&");
+                for (var i = 0; params.length; i++) {
+                    if (params[i] != null) {
+                        var arr = params[i].split("=");
+                        if (arr.length > 1 && arr[0] == name) return arr[1];
+                    }
+                }
+            }
+
+        }
+        return "";
+    }
+
+    var params = "N";
+    $(function () {
+        $("#side-bar").on('click', function () {
+            window.location.href = "/lymessage/gkly?token=" + taken_for_user
+        });
+        if (params == "Y") {
+            showLogin(this, 'left');
+            ptwzLogin();
+        } else {
+            console.log(123);
+        }
+        $("#cbg").on('click','#login', function () {
+            //window.location.href = "/user/redirect/isgjptLogin"
+             window.location.href = "/portal/index.do?login=Y";
+        });
+
+    })
+
+
+    var imgPath = '';
+    window.onload = function () {//判断是否是idc登陆
+        //dl1:网站用户；dl2:IDC用户；dl3:APP商店；dl4:CDN用户
+        var targetProtocol = "https:";
+		if (window.location.protocol != targetProtocol){
+			window.location.href = targetProtocol + window.location.href.substring(window.location.protocol.length);
+		}
+        if (getParam("keys")) {
+            $('#dl1').attr("class", "active");
+            $('#dl2').attr("class", "");
+            $('#dl3').attr("class", "");
+            $('#dl8').attr("class", "");
+            $("#ptyh").show();
+            $("#jrs").hide();
+            $("#appMarket").hide();
+            $("#xcPanel").hide();
+            $("#ewm").hide();
+            //$("#sec").hide();
+            $("#huangYing").hide();
+            $("#cbg").css("background-image", "url(../img/adbg.png)");
+            $("#imgliucheng").attr("src", imgPath + "/img/liuchengRight.png");
+            showLogin(this, 'left')
+            //$("#huangYing").show();
+        } else {
+            $("#ewm").hide();
+            $("#huangYing").hide();
+        }
+        if ($("#dengLuType").val() == 'idc') {
+            idcLogin();
+        } else if ($("#dengLuType").val() == 'app') {
+            appLogin();
+        } else if ($("#dengLuType").val() == 'cdn') {
+            cdnLogin();
+        } else if ($("#dengLuType").val() == 'ptyh') {
+            ptwzLogin();
+        } else if ($("#dengLuType").val() == 'xcyh') {
+            xcLogin();
+        }
+        $("#cbg").on('click','#login', function () {
+            window.location.href = "/user/redirect/isgjptLogin"
+            //window.location.href = "/portal/index.do?login=Y";
+        });
+		// 1.1 获取需要的标签
+        var as = document.getElementsByClassName('content-header')[0].getElementsByTagName('a');
+        var contents = document.getElementsByClassName('dom');
+
+        // 1.2 遍历
+        for (var i = 0; i < as.length; i++) {
+            // 1.2.1 取出单个对象
+            var a = as[i];
+            a.id = i;
+
+            // 1.2.2 监听鼠标的移动事件
+            a.onclick = function () {
+                // 让所有的a的class都清除
+                for (var j = 0; j < as.length; j++) {
+                    as[j].className = '';
+                    contents[j].style.display = 'none';
+                }
+
+                // 设置当前a的class
+                this.className = 'current';
+                // 从contents数组中取出对应的标签
+                contents[this.id].style.display = 'block';
+            }
+
+        }
+    }
+    //dl2:IDC用户
+    $('#qyLoginA').on('click', function () {
+        idcLogin();
+    })
+    //dl1:网站用户
+    $('#PTUSER').on('click', function () {
+        ptwzLogin();
+    });
+    //dl3:APP商店
+    $('#APPMarket').on('click', function () {
+        appLogin();
+    });
+    //dl4:cdn用户
+    $('#CDN').on('click', function () {
+        cdnLogin();
+    });
+    //dl8:域名服务商、搜索引擎厂商、浏览器厂商、音视频服务商
+    $('#xc').on('click', function () {
+        xcLogin();
+    });
+
+    function idcEwm() {
+        $("#dlk").hide();
+        $("#ewm").show();
+    }
+
+    function djfh() {
+        $("#dlk").show();
+        $("#ewm").hide();
+    }
+
+    function djxs() {
+        $("#dlk").hide();
+        $("#ewm").show();
+    }
+
+    //idc登陆
+    function idcLogin() {
+        $('#dl1').attr("class", "");
+        $('#dl2').attr("class", "active");
+        $('#dl3').attr("class", "");
+        $('#dl8').attr("class", "");
+        $("#jrs").show();
+        $("#ptyh").hide();
+        $("#appMarket").hide();
+        $("#xcPanel").hide();
+        $("#ewm").hide();
+        //$("#sec").hide();
+        $("#huangYing").show();
+        //$("#cbg").css("background-image","url(../img/adbg_idc.png)");
+        $("#imgliucheng").attr("src", "/img/liuchengIdc.png");
+    }
+
+    //APP商店用户登陆
+    function appLogin() {
+        $('#dl1').attr("class", "");
+        $('#dl2').attr("class", "");
+        $('#dl3').attr("class", "active");
+        $('#dl8').attr("class", "");
+        $("#appMarket").show();
+        $("#ptyh").hide();
+        $("#jrs").hide();
+        //$("#sec").hide();
+        $("#xcPanel").hide();
+        $("#ewm").hide();
+        $("#huangYing").hide();
+        $("#cbg").css("background-image", "url(../img/adbg.png)");
+        $("#imgliucheng").attr("src", imgPath + "/img/appBg.png");
+    }
+
+    //CDN用户登陆
+    function cdnLogin() {
+        $('#dl1').attr("class", "");
+        $('#dl2').attr("class", "");
+        $('#dl3').attr("class", "");
+        $('#dl8').attr("class", "active");
+        $("#xcPanel").show();
+        $("#appMarket").hide();
+        $("#ptyh").hide();
+        $("#jrs").hide();
+        //$("#sec").hide();
+        $("#ewm").hide();
+        $("#huangYing").hide();
+        $("#cbg").css("background-image", "url(../img/adbg.png)");
+        $("#imgliucheng").attr("src", imgPath + "/img/appBg.png");
+    }
+
+    //普通网站用户登陆
+    function ptwzLogin() {
+        $('#dl1').attr("class", "active");
+        $('#dl2').attr("class", "");
+        $('#dl3').attr("class", "");
+        $('#dl8').attr("class", "");
+        $("#ptyh").show();
+        $("#jrs").hide();
+        $("#appMarket").hide();
+        $("#xcPanel").hide();
+        $("#ewm").hide();
+        //$("#sec").hide();
+        $("#huangYing").hide();
+        $("#cbg").css("background-image", "url(../img/adbg.png)");
+        $("#imgliucheng").attr("src", imgPath + "/img/liuchengRight.png");
+    }
+
+    //域名服务商、搜索引擎厂商、浏览器厂商、音视频服务商
+    function xcLogin() {
+        $('#dl1').attr("class", "");
+        $('#dl2').attr("class", "");
+        $('#dl3').attr("class", "");
+        $('#dl8').attr("class", "active");
+        $("#xcPanel").show();
+        $("#appMarket").hide();
+        $("#ptyh").hide();
+        $("#jrs").hide();
+        $("#ewm").hide();
+        //$("#sec").hide();
+        $("#huangYing").hide();
+        $("#cbg").css("background-image", "url(../img/adbg.png)");
+        $("#imgliucheng").attr("src", imgPath + "/img/appBg.png");
+    }
+</script>
+</html>
+
